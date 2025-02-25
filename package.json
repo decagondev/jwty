@@ -1,0 +1,20 @@
+{
+  "name": "jwty",
+  "version": "1.0.0",
+  "description": "JWT Token Generator",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "start": "node index.js",
+    "test": "node test.jwty.js"
+  },
+  "keywords": ["jwt", "token", "generator"],
+  "author": "Tom Tarpey",
+  "license": "ISC",
+  "dependencies": {
+    "jwt-encode": "^1.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
