@@ -1,12 +1,12 @@
 {
-  "name": "jwty",
+  "name": "jawty",
   "version": "1.0.0",
   "description": "JWT Token Generator",
   "main": "index.js",
   "scripts": {
     "dev": "nodemon index.js",
     "start": "node index.js",
-    "test": "node test.jwty.js"
+    "test": "node test.jawty.js"
   },
   "keywords": ["jwt", "token", "generator"],
   "author": "Tom Tarpey",

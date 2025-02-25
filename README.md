@@ -1,4 +1,4 @@
-# jwty
+# jawty
 
 A simple and lightweight JWT (JSON Web Token) generator for Node.js applications.
 
@@ -7,7 +7,7 @@ A simple and lightweight JWT (JSON Web Token) generator for Node.js applications
 Install the package using npm:
 
 ```bash
-npm install jwty
+npm install jawty
 ```
 
 ## Usage
@@ -15,7 +15,7 @@ npm install jwty
 First, require the package in your code:
 
 ```javascript
-const { generateJwtToken } = require('jwty');
+const { generateJwtToken } = require('jawty');
 ```
 
 ### Generating a JWT Token
