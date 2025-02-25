@@ -1,4 +1,5 @@
 const jwt_encode = require('jwt-encode');
+const jwt = require('jsonwebtoken');
 
 /**
  * Generates a JWT (JSON Web Token) with the provided payload data and configuration
@@ -28,5 +29,35 @@ const generateJwtToken = (data, issuer, secret, expiresIn) => {
     return jwt_encode(payload, secret);
 };
 
-module.exports = { generateJwtToken };
+/**
+ * Decodes and verifies a JWT token
+ * 
+ * @param {string} token - The JWT token to decode
+ * @param {string} secret - The secret key used to verify the token's signature
+ * @returns {Object} The verified and decoded token payload containing:
+ *   - data: The custom payload data
+ *   - iss: The token issuer
+ *   - exp: The expiration timestamp
+ *   - iat: The issued at timestamp
+ * 
+ * @throws {Error} If the token is invalid, expired, or has been tampered with
+ * 
+ * @example
+ * try {
+ *   const decodedToken = decodeJwtToken('your.jwt.token', 'your-secret-key');
+ *   console.log(decodedToken.data); // Access the custom payload data
+ *   console.log(decodedToken.iss); // Access the issuer
+ * } catch (error) {
+ *   console.error('Token verification failed:', error.message);
+ * }
+ */
+const decodeJwtToken = (token, secret) => {
+    try {
+        return jwt.verify(token, secret);
+    } catch (error) {
+        throw new Error(`Failed to decode token: ${error.message}`);
+    }
+};
+
+module.exports = { generateJwtToken, decodeJwtToken };
 

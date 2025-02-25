@@ -1,6 +1,6 @@
 {
   "name": "jawty",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "JWT Token Generator",
   "main": "index.js",
   "scripts": {
@@ -8,10 +8,15 @@
     "start": "node index.js",
     "test": "node test.jawty.js"
   },
-  "keywords": ["jwt", "token", "generator"],
+  "keywords": [
+    "jwt",
+    "token",
+    "generator"
+  ],
   "author": "Tom Tarpey",
   "license": "ISC",
   "dependencies": {
+    "jsonwebtoken": "^9.0.2",
     "jwt-encode": "^1.0.1"
   },
   "devDependencies": {
